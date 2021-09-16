@@ -19,62 +19,70 @@ const publishList = [
   {
     id: shortId.generate(),
     title: 'Publish Soft CMS',
+    explain: {
+      title: '퍼블리시 소프트 Admin Page',
+      my: '퍼블리싱 / 유지보수',
+    },
     img: (
-      <Image
-        height={200}
-        src={require('../public/list/publishsoftAdmin2.png')}
-      />
+      <img height={200} src={require('../public/list/publishsoftAdmin2.png')} />
     ),
   },
   {
     id: shortId.generate(),
     title: 'Publish Soft PMS',
-    img: '',
+    img: (
+      <img height={200} src={require('../public/list/publishsoftAdmin2.png')} />
+    ),
   },
   {
     id: shortId.generate(),
     title: '인터넷 신문 협회',
-    img: '',
+    img: <img height={200} src={require('../public/list/internetNews.png')} />,
   },
   {
     id: shortId.generate(),
     title: 'KLB',
-    img: '',
+    img: <img height={200} src={require('../public/list/klb.png')} />,
   },
   {
     id: shortId.generate(),
     title: '토큰포스트',
-    img: '',
+    img: <img height={200} src={require('../public/list/tp.png')} />,
   },
   {
     id: shortId.generate(),
-    title: 'econotimes',
-    img: '',
+    title: 'EconoTimes',
+    img: <img height={200} src={require('../public/list/econotimes.png')} />,
   },
   {
     id: shortId.generate(),
     title: '퍼블리시 링크 V2',
-    img: '',
+    img: <img height={200} src={require('../public/list/link.png')} />,
   },
   {
     id: shortId.generate(),
     title: '코인고스트 V1 / V2',
-    img: '',
+    img: <img height={200} src={require('../public/list/cg.png')} />,
   },
   {
     id: shortId.generate(),
     title: '본다빈치',
-    img: '',
+    img: <img height={200} src={require('../public/list/bdvc.png')} />,
   },
   {
     id: shortId.generate(),
     title: 'Big Issue',
-    img: '',
+    img: <img height={200} src={require('../public/list/bis.png')} />,
   },
   {
     id: shortId.generate(),
     title: 'Publish Protocol',
-    img: '',
+    img: <img height={200} src={require('../public/list/protocol.png')} />,
+  },
+  {
+    id: shortId.generate(),
+    title: 'Publish Toolkit',
+    img: <img height={200} src={require('../public/list/toolkit.png')} />,
   },
 ];
 
@@ -100,6 +108,9 @@ const PortpolioList = () => {
           </StyledList>
         </TabPane>
         <TabPane tab={`Publishing(${legnth2})`} key='2'>
+          <p style={{ textAlign: 'center' }}>
+            🍎 웹 퍼블리셔로 근무하며 작업한 작업물 입니다.
+          </p>
           <StyledList>
             {publishList.map((list) => {
               return (

@@ -90,7 +90,7 @@ const AboutMe = () => {
           </ProfileImg>
         </Col>
       </Row>
-      <Row style={{ marginTop: '2rem;' }}>
+      <Row style={{ marginTop: '2rem' }}>
         <Col xs={24} md={12} xl={12}>
           <Paragraph>
             <p className='subTitle'>

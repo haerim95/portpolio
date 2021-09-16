@@ -8,15 +8,18 @@ const StyledList = styled.ul`
   list-style: none;
   li {
     width: 32%;
+    padding: 1rem 2rem 0;
     display: inline-block;
     text-align: center;
 
     div {
       width: 100%;
     }
-
-    & + & {
-      margin-left: 2%;
+    p {
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #5e4462;
     }
   }
   img {
