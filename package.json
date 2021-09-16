@@ -1,0 +1,29 @@
+{
+  "name": "portpolio-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "author": "haerim",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/icons": "^4.6.4",
+    "antd": "^4.16.13",
+    "babel-plugin-styled-components": "^1.13.2",
+    "next": "9",
+    "next-images": "^1.8.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-typing-effect": "^2.0.5",
+    "shortid": "^2.2.16",
+    "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}
