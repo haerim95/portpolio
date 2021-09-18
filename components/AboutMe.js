@@ -111,7 +111,7 @@ const AboutMe = () => {
             </p>
             <p className='intro'>
               ㈜케이체인
-              <span>2018.12 ~ 2021.05</span>
+              <span>웹 퍼블리셔 - 2018.12 ~ 2021.05</span>
             </p>
           </Paragraph>
         </Col>
