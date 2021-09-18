@@ -21,7 +21,7 @@ const Skill = () => {
     },
     {
       title: 'Javascript',
-      img: <Image src={require('../public/img/Javascript.png')} />,
+      img: <Image src={require('../public/img/javascript.png')} />,
     },
     {
       title: 'CSS',
