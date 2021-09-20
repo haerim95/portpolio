@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { Tabs } from 'antd';
 import StyledTitle from './Titles';
 import StyledList from './Lists';
@@ -10,6 +10,12 @@ const { TabPane } = Tabs;
 const PortpolioList = () => {
   const legnth = workData.frontendList.length;
   const legnth2 = workData.publishList.length;
+
+  const hoverInfo = useState(false);
+  const handleHover = useCallback(() => {
+    console.log('마우스 오버', hoverInfo);
+  });
+
   return (
     <div>
       <StyledTitle>
@@ -23,8 +29,10 @@ const PortpolioList = () => {
           <StyledList>
             {workData.frontendList.map((list) => {
               return (
-                <li key={list.id}>
-                  <div>{list.img}</div>
+                <li onMouseEnter={handleHover} key={list.id}>
+                  <div>
+                    <img height={200} src={`/list/${list.img}.png`} />
+                  </div>
                   <p>{list.title}</p>
                 </li>
               );

@@ -3,7 +3,8 @@
     {
       "id": 1,
       "title": "Travelary",
-      "img": ""
+      "img": "travelary",
+      "url": ""
     }
   ],
   "publishList": [
@@ -14,62 +15,80 @@
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수"
       },
-      "img": "publishsoftAdmin1"
+      "img": "publishsoftAdmin1",
+      "url": "https://publishinc.io/en/apps"
     },
     {
       "id": 2,
       "title": "Publish Soft PMS",
-      "img": "publishsoftAdmin2"
+      "img": "publishsoftAdmin2",
+      "url": "https://publishinc.io/en/apps"
     },
     {
       "id": 3,
       "title": "인터넷 신문 협회",
-      "img": "internetNews"
+      "img": "internetNews",
+      "url": "https://kina.or.kr"
     },
     {
       "id": 4,
       "title": "KLB",
-      "img": "klb"
+      "img": "klb",
+      "url": "https://klb.news/"
     },
     {
       "id": 5,
       "title": "토큰포스트",
-      "img": "tp"
+      "img": "tp",
+      "url": "https://www.tokenpost.kr/"
     },
     {
       "id": 6,
       "title": "EconoTimes",
-      "img": "econotimes"
+      "img": "econotimes",
+      "url": "https://www.econotimes.com/"
     },
     {
       "id": 7,
       "title": "퍼블리시 링크 V2",
-      "img": "link"
+      "img": "link",
+      "url": "서비스 시작 전"
     },
     {
       "id": 8,
-      "title": "코인고스트 V1 / V2",
-      "img": "cg"
+      "title": "코인고스트 V1",
+      "img": "cg",
+      "url": "서비스 중단"
+    },
+    {
+      "id": 13,
+      "title": "코인고스트 V2",
+      "img": "cg2",
+      "url": "서비스 중단"
     },
     {
       "id": 9,
       "title": "본다빈치",
-      "img": "bdvc"
+      "img": "bdvc",
+      "url": "https://www.bondavinci.com/"
     },
     {
       "id": 10,
-      "title": "Big Issue",
-      "img": "bis"
+      "title": "빅이슈 Korea",
+      "img": "bis",
+      "url": "https://bigissue.kr/"
     },
     {
       "id": 11,
       "title": "Publish Protocol",
-      "img": "protocol"
+      "img": "protocol",
+      "url": "https://publishprotocol.io/"
     },
     {
       "id": 12,
       "title": "Publish Toolkit",
-      "img": "toolkit"
+      "img": "toolkit",
+      "url": "서비스 중단"
     }
   ]
 }

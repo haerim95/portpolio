@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
 
 const StyledList = styled.ul`
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -13,7 +15,11 @@ const StyledList = styled.ul`
     text-align: center;
 
     div {
+      border: 1px solid #ededed;
+      border-radius: 10px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       width: 100%;
+      overflow: hidden;
     }
     p {
       margin-top: 1rem;
