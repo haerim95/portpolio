@@ -3,6 +3,11 @@
     {
       "id": 1,
       "title": "Travelary",
+      "explain": {
+        "title": "개인 여행 블로그 Travelary",
+        "work": "front-end / back-end",
+        "skill": "react / node express / my sql"
+      },
       "img": "travelary",
       "url": ""
     }

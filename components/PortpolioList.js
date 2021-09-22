@@ -3,6 +3,7 @@ import { Tabs } from 'antd';
 import StyledTitle from './Titles';
 import StyledList from './Lists';
 import workData from './workData.json';
+import HoverContent from './HoverContent';
 
 const { TabPane } = Tabs;
 // const shortid = shortId.generate();
@@ -31,9 +32,14 @@ const PortpolioList = () => {
                   onMouseLeave={() => setHoverInfo(!hoverInfo)}
                   key={list.id}
                 >
-                  <div>
+                  <div style={{ position: 'relative' }}>
                     <img height={200} src={`/list/${list.img}.png`} />
-                    {hoverInfo === true ? <div>허허허..</div> : null}
+                    {hoverInfo === true ? (
+                      <HoverContent>
+                        <span>{list.explain.title}</span>
+                        <span>{list.explain.skill}</span>
+                      </HoverContent>
+                    ) : null}
                   </div>
                   <p>{list.title}</p>
                 </li>
