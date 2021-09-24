@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import workData from './workData.json';
 
 const HoverContents = styled.div`
   position: absolute;
@@ -13,6 +12,10 @@ const HoverContents = styled.div`
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   color: #ffffff;
+  span {
+    display: block;
+    flex: 1;
+  }
 `;
 
 const HoverContent = ({ children }) => {

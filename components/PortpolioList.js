@@ -8,11 +8,29 @@ import HoverContent from './HoverContent';
 const { TabPane } = Tabs;
 // const shortid = shortId.generate();
 
+function HoverItem({ src, list }) {
+  const [hoverInfo, setHoverInfo] = useState(false);
+
+  return (
+    <div
+      style={{ position: 'relative' }}
+      onMouseEnter={() => setHoverInfo(!hoverInfo)}
+      onMouseLeave={() => setHoverInfo(!hoverInfo)}
+    >
+      <img height={200} src={src} />
+      {hoverInfo === true ? (
+        <HoverContent>
+          <span>{list.title}</span>
+          <span>{list.skill}</span>
+        </HoverContent>
+      ) : null}
+    </div>
+  );
+}
+
 const PortpolioList = () => {
   const legnth = workData.frontendList.length;
   const legnth2 = workData.publishList.length;
-
-  const [hoverInfo, setHoverInfo] = useState(false);
 
   return (
     <div>
@@ -27,20 +45,11 @@ const PortpolioList = () => {
           <StyledList>
             {workData.frontendList.map((list) => {
               return (
-                <li
-                  onMouseEnter={() => setHoverInfo(!hoverInfo)}
-                  onMouseLeave={() => setHoverInfo(!hoverInfo)}
-                  key={list.id}
-                >
-                  <div style={{ position: 'relative' }}>
-                    <img height={200} src={`/list/${list.img}.png`} />
-                    {hoverInfo === true ? (
-                      <HoverContent>
-                        <span>{list.explain.title}</span>
-                        <span>{list.explain.skill}</span>
-                      </HoverContent>
-                    ) : null}
-                  </div>
+                <li key={list.id}>
+                  <HoverItem
+                    src={`/list/${list.img}.png`}
+                    list={list.explain}
+                  />
                   <p>{list.title}</p>
                 </li>
               );
@@ -55,9 +64,10 @@ const PortpolioList = () => {
             {workData.publishList.map((list) => {
               return (
                 <li key={list.id}>
-                  <div>
-                    <img height={200} src={`/list/${list.img}.png`} />
-                  </div>
+                  <HoverItem
+                    src={`/list/${list.img}.png`}
+                    list={list.explain}
+                  />
                   <p>{list.title}</p>
                 </li>
               );
