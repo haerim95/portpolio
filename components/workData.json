@@ -6,10 +6,10 @@
       "explain": {
         "title": "개인 여행 블로그 Travelary",
         "work": "front-end / back-end",
-        "skill": "react / node express / my sql"
+        "skill": "react / node express / my sql",
+        "url": ""
       },
-      "img": "travelary",
-      "url": ""
+      "img": "travelary"
     }
   ],
   "publishList": [
@@ -19,10 +19,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://publishinc.io/en/apps"
       },
-      "img": "publishsoftAdmin1",
-      "url": "https://publishinc.io/en/apps"
+      "img": "publishsoftAdmin1"
     },
     {
       "id": 2,
@@ -30,10 +30,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://publishinc.io/en/apps"
       },
-      "img": "publishsoftAdmin2",
-      "url": "https://publishinc.io/en/apps"
+      "img": "publishsoftAdmin2"
     },
     {
       "id": 3,
@@ -41,10 +41,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://kina.or.kr"
       },
-      "img": "internetNews",
-      "url": "https://kina.or.kr"
+      "img": "internetNews"
     },
     {
       "id": 4,
@@ -52,10 +52,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://klb.news/"
       },
-      "img": "klb",
-      "url": "https://klb.news/"
+      "img": "klb"
     },
     {
       "id": 5,
@@ -63,10 +63,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://www.tokenpost.kr/"
       },
-      "img": "tp",
-      "url": "https://www.tokenpost.kr/"
+      "img": "tp"
     },
     {
       "id": 6,
@@ -74,10 +74,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://www.econotimes.com/"
       },
-      "img": "econotimes",
-      "url": "https://www.econotimes.com/"
+      "img": "econotimes"
     },
     {
       "id": 7,
@@ -85,10 +85,11 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "",
+        "closed": "오픈 예정"
       },
-      "img": "link",
-      "url": "서비스 시작 전"
+      "img": "link"
     },
     {
       "id": 8,
@@ -96,10 +97,11 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "",
+        "closed": "서비스 중단"
       },
-      "img": "cg",
-      "url": "서비스 중단"
+      "img": "cg"
     },
     {
       "id": 13,
@@ -107,10 +109,11 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "",
+        "closed": "서비스 중단"
       },
-      "img": "cg2",
-      "url": "서비스 중단"
+      "img": "cg2"
     },
     {
       "id": 9,
@@ -118,10 +121,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://www.bondavinci.com/"
       },
-      "img": "bdvc",
-      "url": "https://www.bondavinci.com/"
+      "img": "bdvc"
     },
     {
       "id": 10,
@@ -129,10 +132,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://bigissue.kr/"
       },
-      "img": "bis",
-      "url": "https://bigissue.kr/"
+      "img": "bis"
     },
     {
       "id": 11,
@@ -140,10 +143,10 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "https://publishprotocol.io/"
       },
-      "img": "protocol",
-      "url": "https://publishprotocol.io/"
+      "img": "protocol"
     },
     {
       "id": 12,
@@ -151,10 +154,11 @@
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
-        "skill": "react / node express / my sql"
+        "skill": "html / css / jquery / js",
+        "url": "",
+        "closed": "서비스 중단"
       },
-      "img": "toolkit",
-      "url": "서비스 중단"
+      "img": "toolkit"
     }
   ]
 }

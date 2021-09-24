@@ -22,6 +22,18 @@ function HoverItem({ src, list }) {
         <HoverContent>
           <span>{list.title}</span>
           <span>{list.skill}</span>
+          {list.url !== '' ? (
+            <a
+              href={list.url}
+              target='_blank'
+              rel='noreferrer'
+              style={{ marginTop: '1rem' }}
+            >
+              <span>{list.url}</span>
+            </a>
+          ) : (
+            <span style={{ marginTop: '1rem' }}>{list.closed}</span>
+          )}
         </HoverContent>
       ) : null}
     </div>

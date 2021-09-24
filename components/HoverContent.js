@@ -8,13 +8,21 @@ const HoverContents = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.8);
   color: #ffffff;
-  span {
-    display: block;
-    flex: 1;
+  span:nth-last-child(1) {
+    color: #c4abc9;
+  }
+  a {
+    span {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 `;
 
