@@ -13,7 +13,7 @@ const layout = {
 
 const ContactMe = () => {
   return (
-    <div>
+    <div style={{ marginBottom: '4rem' }}>
       <StyledTitle>
         <span>💌 Contact Me </span>
       </StyledTitle>
