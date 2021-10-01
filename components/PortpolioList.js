@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
 import StyledTitle from './Titles';
 import StyledList from './Lists';
+import Router from 'next/router';
 import workData from './workData.json';
 import HoverContent from './HoverContent';
 
@@ -29,11 +31,14 @@ function HoverItem({ src, list }) {
               rel='noreferrer'
               style={{ marginTop: '1rem' }}
             >
-              <span>{list.url}</span>
+              <span>사이트 바로가기</span>
             </a>
           ) : (
             <span style={{ marginTop: '1rem' }}>{list.closed}</span>
           )}
+          <button onClick={() => Router.push('/portpolio')}>
+            사이트 상세보기
+          </button>
         </HoverContent>
       ) : null}
     </div>
@@ -89,6 +94,11 @@ const PortpolioList = () => {
       </Tabs>
     </div>
   );
+};
+
+HoverItem.propTypes = {
+  src: PropTypes.isRequired,
+  list: PropTypes.isRequired,
 };
 
 export default PortpolioList;

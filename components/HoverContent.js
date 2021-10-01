@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const HoverContents = styled.div`
@@ -28,6 +29,10 @@ const HoverContents = styled.div`
 
 const HoverContent = ({ children }) => {
   return <HoverContents>{children}</HoverContents>;
+};
+
+HoverContent.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default HoverContent;

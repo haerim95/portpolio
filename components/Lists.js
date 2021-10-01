@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledList = styled.ul`
@@ -39,6 +40,10 @@ const Lists = ({ children }) => {
       <StyledList>{children}</StyledList>
     </div>
   );
+};
+
+Lists.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default Lists;
