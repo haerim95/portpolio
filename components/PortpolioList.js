@@ -97,8 +97,8 @@ const PortpolioList = () => {
 };
 
 HoverItem.propTypes = {
-  src: PropTypes.isRequired,
-  list: PropTypes.isRequired,
+  src: PropTypes.any.isRequired,
+  list: PropTypes.any.isRequired,
 };
 
 export default PortpolioList;
