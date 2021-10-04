@@ -10,7 +10,7 @@ import HoverContent from './HoverContent';
 const { TabPane } = Tabs;
 // const shortid = shortId.generate();
 
-function HoverItem({ src, list }) {
+function HoverItem({ src, list, id, category }) {
   const [hoverInfo, setHoverInfo] = useState(false);
 
   return (
@@ -36,7 +36,9 @@ function HoverItem({ src, list }) {
           ) : (
             <span style={{ marginTop: '1rem' }}>{list.closed}</span>
           )}
-          <button onClick={() => Router.push('/portpolio')}>
+          <button
+            onClick={() => Router.push(`/portpolio?name=${category}/${id}`)}
+          >
             사이트 상세보기
           </button>
         </HoverContent>
@@ -66,6 +68,8 @@ const PortpolioList = () => {
                   <HoverItem
                     src={`/list/${list.img}.png`}
                     list={list.explain}
+                    id={list.id}
+                    category={list.category}
                   />
                   <p>{list.title}</p>
                 </li>
@@ -84,6 +88,8 @@ const PortpolioList = () => {
                   <HoverItem
                     src={`/list/${list.img}.png`}
                     list={list.explain}
+                    id={list.id}
+                    category={list.category}
                   />
                   <p>{list.title}</p>
                 </li>
@@ -99,6 +105,8 @@ const PortpolioList = () => {
 HoverItem.propTypes = {
   src: PropTypes.any.isRequired,
   list: PropTypes.any.isRequired,
+  id: PropTypes.any.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default PortpolioList;
