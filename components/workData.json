@@ -8,8 +8,8 @@
         "title": "개인 여행 블로그 Travelary",
         "work": "front-end / back-end",
         "skill": "react / node express / my sql",
-        "url": "",
-        "date": "2021.07.21 ~ 2021.08.11"
+        "date": "2021.07.21 ~ 2021.08.11",
+        "git": "https://github.com/haerim95/travelary"
       },
       "img": "travelary"
     }
