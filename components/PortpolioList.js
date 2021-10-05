@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Tabs } from 'antd';
 import StyledTitle from './Titles';
 import StyledList from './Lists';
-import Router from 'next/router';
 import workData from './workData.json';
 import HoverContent from './HoverContent';
+import Link from 'next/link';
 
 const { TabPane } = Tabs;
 // const shortid = shortId.generate();
 
-function HoverItem({ src, list, id, category }) {
+function HoverItem({ src, list, id, name }) {
   const [hoverInfo, setHoverInfo] = useState(false);
 
   return (
@@ -36,11 +36,9 @@ function HoverItem({ src, list, id, category }) {
           ) : (
             <span style={{ marginTop: '1rem' }}>{list.closed}</span>
           )}
-          <button
-            onClick={() => Router.push(`/portpolio?name=${category}/${id}`)}
-          >
-            사이트 상세보기
-          </button>
+          <Link href={`/portpolio/${name}/${id}`}>
+            <a>사이트 상세보기</a>
+          </Link>
         </HoverContent>
       ) : null}
     </div>
@@ -69,7 +67,7 @@ const PortpolioList = () => {
                     src={`/list/${list.img}.png`}
                     list={list.explain}
                     id={list.id}
-                    category={list.category}
+                    name={list.name}
                   />
                   <p>{list.title}</p>
                 </li>
@@ -89,7 +87,7 @@ const PortpolioList = () => {
                     src={`/list/${list.img}.png`}
                     list={list.explain}
                     id={list.id}
-                    category={list.category}
+                    name={list.name}
                   />
                   <p>{list.title}</p>
                 </li>
@@ -106,7 +104,7 @@ HoverItem.propTypes = {
   src: PropTypes.any.isRequired,
   list: PropTypes.any.isRequired,
   id: PropTypes.any.isRequired,
-  category: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default PortpolioList;

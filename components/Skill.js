@@ -65,7 +65,7 @@ const Skill = () => {
         dataSource={data}
         renderItem={(item) => (
           <List.Item>
-            <Card style={{ textAlign: 'center;' }}>
+            <Card style={{ textAlign: 'center' }}>
               {item.img}
               <p style={{ marginTop: '.5rem' }}>{item.title}</p>
             </Card>

@@ -29,15 +29,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/portpolio": [
+    "/portpolio/publisher/[id]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/portpolio.js"
-    ],
-    "/portpolio/[id]": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/portpolio/[id].js"
+      "static/chunks/pages/portpolio/publisher/[id].js"
     ]
   },
   "ampFirstPages": []

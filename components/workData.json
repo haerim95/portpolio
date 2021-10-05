@@ -2,13 +2,14 @@
   "frontendList": [
     {
       "id": 1,
-      "category": "front",
+      "name": "front",
       "title": "Travelary",
       "explain": {
         "title": "개인 여행 블로그 Travelary",
         "work": "front-end / back-end",
         "skill": "react / node express / my sql",
-        "url": ""
+        "url": "",
+        "date": "2021.07.21 ~ 2021.08.11"
       },
       "img": "travelary"
     }
@@ -16,7 +17,7 @@
   "publishList": [
     {
       "id": 1,
-      "category": "publisher",
+      "name": "publisher",
       "title": "Publish Soft CMS",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -28,7 +29,7 @@
     },
     {
       "id": 2,
-      "category": "publisher",
+      "name": "publisher",
       "title": "Publish Soft PMS",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -36,11 +37,11 @@
         "skill": "html / css / jquery / js",
         "url": "https://publishinc.io/en/apps"
       },
-      "img": "publishsoftAdmin2"
+      "img": "publishsoft"
     },
     {
       "id": 3,
-      "category": "publisher",
+      "name": "publisher",
       "title": "인터넷 신문 협회",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -52,7 +53,7 @@
     },
     {
       "id": 4,
-      "category": "publisher",
+      "name": "publisher",
       "title": "KLB",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -64,7 +65,7 @@
     },
     {
       "id": 5,
-      "category": "publisher",
+      "name": "publisher",
       "title": "토큰포스트",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -76,7 +77,7 @@
     },
     {
       "id": 6,
-      "category": "publisher",
+      "name": "publisher",
       "title": "EconoTimes",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -88,7 +89,7 @@
     },
     {
       "id": 7,
-      "category": "publisher",
+      "name": "publisher",
       "title": "퍼블리시 링크 V2",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -101,7 +102,7 @@
     },
     {
       "id": 8,
-      "category": "publisher",
+      "name": "publisher",
       "title": "코인고스트 V1",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -114,7 +115,7 @@
     },
     {
       "id": 13,
-      "category": "publisher",
+      "name": "publisher",
       "title": "코인고스트 V2",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -127,7 +128,7 @@
     },
     {
       "id": 9,
-      "category": "publisher",
+      "name": "publisher",
       "title": "본다빈치",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -139,7 +140,7 @@
     },
     {
       "id": 10,
-      "category": "publisher",
+      "name": "publisher",
       "title": "빅이슈 Korea",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -151,7 +152,7 @@
     },
     {
       "id": 11,
-      "category": "publisher",
+      "name": "publisher",
       "title": "Publish Protocol",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
@@ -163,7 +164,7 @@
     },
     {
       "id": 12,
-      "category": "publisher",
+      "name": "publisher",
       "title": "Publish Toolkit",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
