@@ -25,12 +25,14 @@ const HoverContents = styled.div`
       }
     }
   }
-  button {
-    background-color: #c4abc9;
-    border: none;
+  .more {
     padding: 0.3rem 0.5rem;
     margin-top: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
+    border: none;
+    background-color: #c4abc9;
+    color: #ffffff;
   }
 `;
 

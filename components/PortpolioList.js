@@ -37,7 +37,7 @@ function HoverItem({ src, list, id, name }) {
             <span style={{ marginTop: '1rem' }}>{list.closed}</span>
           )}
           <Link href={`/portpolio/${name}/${id}`}>
-            <a>사이트 상세보기</a>
+            <a className='more'>사이트 상세보기</a>
           </Link>
         </HoverContent>
       ) : null}
@@ -69,7 +69,11 @@ const PortpolioList = () => {
                     id={list.id}
                     name={list.name}
                   />
-                  <p>{list.title}</p>
+                  <Link href={`/portpolio/${list.name}/${list.id}`}>
+                    <a>
+                      <p>{list.title}</p>
+                    </a>
+                  </Link>
                 </li>
               );
             })}
@@ -89,7 +93,11 @@ const PortpolioList = () => {
                     id={list.id}
                     name={list.name}
                   />
-                  <p>{list.title}</p>
+                  <Link href={`/portpolio/${list.name}/${list.id}`}>
+                    <a>
+                      <p>{list.title}</p>
+                    </a>
+                  </Link>
                 </li>
               );
             })}

@@ -7,18 +7,26 @@ import styled from 'styled-components';
 
 const Header = styled.div`
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 2rem;
+  align-items: center;
+  padding: 0 2rem;
+  height: 30px;
   background-color: rgba(255, 255, 255, 0.8);
   a {
     color: #222222;
     text-decoration: none;
     font-weight: 700;
+    span {
+      padding-left: 4px;
+      font-size: 0.8rem;
+      font-weight: normal;
+      color: #222222;
+    }
   }
 `;
 
@@ -34,7 +42,7 @@ const AppLayout = ({ children }) => {
           rel='noreferrer noopener'
           target='_blank'
         >
-          <GithubOutlined />
+          <GithubOutlined /> <span>github 바로가기</span>
         </a>
       </Header>
       <Row style={{ paddingTop: '2rem' }}>
