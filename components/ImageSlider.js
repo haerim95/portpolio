@@ -20,15 +20,10 @@ const ImageArea = styled.div`
 `;
 
 // ! image 는 id 값을 이용해서 main${id}.png 식으로 가져오는게 어떨까?
-const ImageGroup = ({ id }) => {
+const ImageSlider = ({ id }) => {
   return (
     <>
       <ImageArea>
-        <Row>
-          <Col xs={12} md={24}>
-            <Image src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' />
-          </Col>
-        </Row>
         <Row>
           <Col>
             <ul>
@@ -57,8 +52,8 @@ const ImageGroup = ({ id }) => {
   );
 };
 
-ImageGroup.propTypes = {
+ImageSlider.propTypes = {
   id: PropTypes.any.isRequired,
 };
 
-export default ImageGroup;
+export default ImageSlider;

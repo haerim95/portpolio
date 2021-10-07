@@ -1,17 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import workData from './workData.json';
-import ImageGroup from './ImageGroup';
+import ImageSlider from './ImageSlider';
 import styled from 'styled-components';
-import { Row, Col } from 'antd';
+import { Row, Col, Image } from 'antd';
 
 const WorkInfo = styled.div`
+  padding-top: 4rem;
   dl {
     display: flex;
+    align-items: center;
+    dt {
+      flex-basis: 135px;
+      min-width: 135px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-align: right;
+      word-spacing: normal;
+      padding: 0.2rem 1rem;
+      background-color: #e7d8ee;
+      color: #5e4462;
+    }
+    dd {
+      padding-left: 15px;
+      font-size: 1rem;
+      word-break: keep-all;
+      color: #5e4462;
+      a {
+        color: #5e4462;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 `;
 
-const Info = ({ title, date, skill, work, url, git }) => {
+const Info = ({ title, date, skill, work, url, git, information }) => {
   return (
     <>
       <dl>
@@ -33,7 +58,11 @@ const Info = ({ title, date, skill, work, url, git }) => {
       {url !== '' ? (
         <dl>
           <dt>사이트 URL : </dt>
-          <dd>{url}</dd>
+          <dd>
+            <a href={url} target='_blank' rel='noreferrer'>
+              {url}
+            </a>
+          </dd>
         </dl>
       ) : (
         <dl>
@@ -41,6 +70,12 @@ const Info = ({ title, date, skill, work, url, git }) => {
           <dd>{git}</dd>
         </dl>
       )}
+      <dl style={{ display: 'inline-block' }}>
+        <dt style={{ textAlign: 'center', maxWidth: '135px' }}>사이트 소개</dt>
+        <dd style={{ fontSize: '0.9rem', marginTop: '1rem', paddingLeft: '0' }}>
+          {information}
+        </dd>
+      </dl>
     </>
   );
 };
@@ -56,23 +91,31 @@ const PortpolioLayout = ({ id }) => {
             return (
               <div key={item.id}>
                 {id == item.id ? (
-                  <Row>
-                    <Col md={12}>
-                      <ImageGroup id={item.id} />
-                    </Col>
-                    <Col md={12}>
-                      <WorkInfo>
-                        <Info
-                          title={item.title}
-                          git={item.explain.git}
-                          url={item.explain.url}
-                          work={item.explain.work}
-                          skill={item.explain.skill}
-                          date={item.explain.date}
-                        />
-                      </WorkInfo>
-                    </Col>
-                  </Row>
+                  <>
+                    <Row>
+                      <Col md={12}>
+                        <Row>
+                          <Col xs={12} md={24} style={{ padding: '0.5rem' }}>
+                            <Image src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' />
+                          </Col>
+                        </Row>
+                      </Col>
+                      <Col md={12} style={{ padding: '0.5rem' }}>
+                        <WorkInfo>
+                          <Info
+                            title={item.title}
+                            git={item.explain.git}
+                            url={item.explain.url}
+                            work={item.explain.work}
+                            skill={item.explain.skill}
+                            date={item.explain.date}
+                            information={item.explain.information}
+                          />
+                        </WorkInfo>
+                      </Col>
+                    </Row>
+                    <ImageSlider id={item.id} />
+                  </>
                 ) : null}
               </div>
             );
@@ -81,23 +124,27 @@ const PortpolioLayout = ({ id }) => {
             return (
               <div key={item.id}>
                 {id == item.id ? (
-                  <Row>
-                    <Col md={12}>
-                      <ImageGroup id={item.id} />
-                    </Col>
-                    <Col md={12}>
-                      <WorkInfo>
-                        <Info
-                          title={item.title}
-                          git={item.explain.git}
-                          url={item.explain.url}
-                          work={item.explain.work}
-                          skill={item.explain.skill}
-                          date={item.explain.date}
-                        />
-                      </WorkInfo>
-                    </Col>
-                  </Row>
+                  <>
+                    <Row>
+                      <Col xs={12} md={12} style={{ padding: '0.5rem' }}>
+                        <Image src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' />
+                      </Col>
+                      <Col md={12} style={{ padding: '0.5rem' }}>
+                        <WorkInfo>
+                          <Info
+                            title={item.title}
+                            git={item.explain.git}
+                            url={item.explain.url}
+                            work={item.explain.work}
+                            skill={item.explain.skill}
+                            date={item.explain.date}
+                            information={item.explain.information}
+                          />
+                        </WorkInfo>
+                      </Col>
+                    </Row>
+                    <ImageSlider id={item.id} />
+                  </>
                 ) : null}
               </div>
             );
@@ -117,6 +164,7 @@ Info.propTypes = {
   git: PropTypes.node.isRequired,
   date: PropTypes.node.isRequired,
   skill: PropTypes.node.isRequired,
+  information: PropTypes.string.isRequired,
 };
 
 export default PortpolioLayout;
