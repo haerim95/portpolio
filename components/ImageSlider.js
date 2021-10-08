@@ -58,54 +58,57 @@ const ImageSlider = ({ id }) => {
     responsive: [],
   };
 
-  return (
-    <>
-      <ImageArea>
-        <Row>
-          <Col>
-            <ul>
-              {workData.publishList.map((item) => {
-                return (
-                  <li key={item.id}>
-                    {id} 와 {item.id}
-                    {id == item.id ? (
-                      <SliderWrap>
-                        <Slider {...settings}>
-                          {item.subList.map((images, index) => {
-                            return (
-                              <>
-                                <Card
-                                  key={images.name}
-                                  className='crop'
-                                  hoverable
-                                  style={{ width: 340, height: 240 }}
-                                  cover={
-                                    <img
-                                      alt='example'
-                                      src={`/content/sub/${images.name}.png`}
-                                    />
-                                  }
-                                >
-                                  <Meta
-                                    title='Europe Street beat'
-                                    description='www.instagram.com'
+  const SubpageData = workData.publishList
+    .filter((item) => {
+      if (id == item.id) {
+        return item;
+      }
+    })
+    .map((item) => {
+      return (
+        <ImageArea key={item.id}>
+          <Row>
+            <Col>
+              <ul>
+                <li>
+                  {id == item.id ? (
+                    <SliderWrap>
+                      <Slider {...settings}>
+                        {item.subList.map((images, index) => {
+                          return (
+                            <>
+                              <Card
+                                key={images.name}
+                                className='crop'
+                                hoverable
+                                style={{ width: 340, height: 240 }}
+                                cover={
+                                  <img
+                                    alt='example'
+                                    src={`/content/sub/${images.name}.png`}
                                   />
-                                </Card>
-                              </>
-                            );
-                          })}
-                        </Slider>
-                      </SliderWrap>
-                    ) : null}
-                  </li>
-                );
-              })}
-            </ul>
-          </Col>
-        </Row>
-      </ImageArea>
-    </>
-  );
+                                }
+                              >
+                                <Meta
+                                  title='Europe Street beat'
+                                  description='www.instagram.com'
+                                />
+                              </Card>
+                            </>
+                          );
+                        })}
+                      </Slider>
+                    </SliderWrap>
+                  ) : null}
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </ImageArea>
+      );
+    });
+
+  return <>{SubpageData}</>;
 };
 
 ImageSlider.propTypes = {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import workData from './workData.json';
 import ImageSlider from './ImageSlider';
@@ -81,9 +81,11 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
 };
 
 const PortpolioLayout = ({ id }) => {
+  // front / publish 나누기
   const current = decodeURI(window.location.href);
   const search = current.split(`/`)[4];
 
+  // 메인 이미지 영역 css
   const frame = {
     height: '500px',
     overflow: 'hidden',
@@ -92,80 +94,93 @@ const PortpolioLayout = ({ id }) => {
     boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
   };
 
-  return (
-    <div>
-      {search === 'front'
-        ? workData.frontendList.filter((item) => {
-            return (
-              <div key={item.id}>
-                {id == item.id ? (
-                  <>
-                    <Row>
-                      <Col md={24}>
-                        <Row>
-                          <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
-                            <div style={frame}>
-                              <Image
-                                height={500}
-                                src={`/content/main/${item.image.main}.png`}
-                              />
-                            </div>
-                          </Col>
-                        </Row>
-                      </Col>
-                      <Col xs={24} md={12} style={{ padding: '0.5rem' }}>
-                        <WorkInfo>
-                          <Info
-                            title={item.title}
-                            git={item.explain.git}
-                            url={item.explain.url}
-                            work={item.explain.work}
-                            skill={item.explain.skill}
-                            date={item.explain.date}
-                            information={item.explain.information}
-                          />
-                        </WorkInfo>
-                      </Col>
-                    </Row>
-                    <ImageSlider id={item.id} />
-                  </>
-                ) : null}
-              </div>
-            );
-          })
-        : workData.publishList.map((item) => {
-            return (
-              <div key={item.id}>
-                {id == item.id ? (
-                  <>
-                    <Row>
-                      <Col xs={12} md={12} style={{ padding: '0.5rem' }}>
-                        <div style={frame}>
-                          <Image src={`/content/main/${item.image.main}.png`} />
-                        </div>
-                      </Col>
-                      <Col md={12} style={{ padding: '0.5rem' }}>
-                        <WorkInfo>
-                          <Info
-                            title={item.title}
-                            git={item.explain.git}
-                            url={item.explain.url}
-                            work={item.explain.work}
-                            skill={item.explain.skill}
-                            date={item.explain.date}
-                            information={item.explain.information}
-                          />
-                        </WorkInfo>
-                      </Col>
-                    </Row>
-                    <ImageSlider id={item.id} />
-                  </>
-                ) : null}
-              </div>
-            );
-          })}
-    </div>
-  );
+  // filter로 걸러주고 map 으로 데이터 받아오기 - front 리스트
+  const front = workData.frontendList
+    .filter((item) => {
+      if (id == item.id) {
+        return item;
+      } else {
+        return null;
+      }
+    })
+    .map((item) => {
+      return (
+        <div key={item.id}>
+          <>
+            <Row>
+              <Col md={24}>
+                <Row>
+                  <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
+                    <div style={frame}>
+                      <Image
+                        height={500}
+                        src={`/content/main/${item.image.main}.png`}
+                      />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col xs={24} md={12} style={{ padding: '0.5rem' }}>
+                <WorkInfo>
+                  <Info
+                    title={item.title}
+                    git={item.explain.git}
+                    url={item.explain.url}
+                    work={item.explain.work}
+                    skill={item.explain.skill}
+                    date={item.explain.date}
+                    information={item.explain.information}
+                  />
+                </WorkInfo>
+              </Col>
+            </Row>
+            <ImageSlider id={item.id} />
+          </>
+        </div>
+      );
+    });
+  // filter로 걸러주고 map 으로 데이터 받아오기 - 퍼블리셔 리스트
+  const publisher = workData.publishList
+    .filter((item) => {
+      if (id == item.id) {
+        return item;
+      }
+    })
+    .map((item) => {
+      return (
+        <div key={item.id}>
+          <>
+            <Row>
+              <Col md={12}>
+                <Row>
+                  <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
+                    <div style={frame}>
+                      <Image src={`/content/main/${item.image.main}.png`} />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col xs={24} md={12} style={{ padding: '0.5rem' }}>
+                <WorkInfo>
+                  <Info
+                    title={item.title}
+                    git={item.explain.git}
+                    url={item.explain.url}
+                    work={item.explain.work}
+                    skill={item.explain.skill}
+                    date={item.explain.date}
+                    information={item.explain.information}
+                  />
+                </WorkInfo>
+              </Col>
+            </Row>
+            <ImageSlider id={item.id} />
+          </>
+        </div>
+      );
+    });
+
+  return <div>{search === 'front' ? front : publisher}</div>;
 };
 
 PortpolioLayout.propTypes = {
