@@ -35,12 +35,21 @@
       "name": "publisher",
       "title": "Publish Soft PMS",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "퍼블리시 소프트 Front Page",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://publishinc.io/en/apps",
         "information": "PublishSoft Front 페이지입니다. 웹 1280, 1080 두 가지 레이아웃과 모바일 퍼블리싱 및 유지보수를 진행하였습니다."
       },
+      "image": {
+        "main": "publishSoftFront"
+      },
+      "subList": [
+        { "name": "softFront1" },
+        { "name": "softFront2" },
+        { "name": "softFront3" },
+        { "name": "softFront4" }
+      ],
       "img": "publishsoft"
     },
     {

@@ -24,11 +24,6 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/portpolio/front/[id]": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/portpolio/front/[id].js"
-    ],
     "/portpolio/publisher/[id]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",

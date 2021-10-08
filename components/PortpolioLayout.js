@@ -84,23 +84,36 @@ const PortpolioLayout = ({ id }) => {
   const current = decodeURI(window.location.href);
   const search = current.split(`/`)[4];
 
+  const frame = {
+    height: '500px',
+    overflow: 'hidden',
+    overflowY: 'scroll',
+    border: 'solid 1px #d6d6d6',
+    boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+  };
+
   return (
     <div>
       {search === 'front'
-        ? workData.frontendList.map((item) => {
+        ? workData.frontendList.filter((item) => {
             return (
               <div key={item.id}>
                 {id == item.id ? (
                   <>
                     <Row>
-                      <Col md={12}>
+                      <Col md={24}>
                         <Row>
-                          <Col xs={12} md={24} style={{ padding: '0.5rem' }}>
-                            <Image src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' />
+                          <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
+                            <div style={frame}>
+                              <Image
+                                height={500}
+                                src={`/content/main/${item.image.main}.png`}
+                              />
+                            </div>
                           </Col>
                         </Row>
                       </Col>
-                      <Col md={12} style={{ padding: '0.5rem' }}>
+                      <Col xs={24} md={12} style={{ padding: '0.5rem' }}>
                         <WorkInfo>
                           <Info
                             title={item.title}
@@ -127,7 +140,9 @@ const PortpolioLayout = ({ id }) => {
                   <>
                     <Row>
                       <Col xs={12} md={12} style={{ padding: '0.5rem' }}>
-                        <Image src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png' />
+                        <div style={frame}>
+                          <Image src={`/content/main/${item.image.main}.png`} />
+                        </div>
                       </Col>
                       <Col md={12} style={{ padding: '0.5rem' }}>
                         <WorkInfo>
