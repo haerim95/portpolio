@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import workData from './workData.json';
@@ -44,10 +44,13 @@ const SliderWrap = styled.div`
     color: black;
     right: 0;
   }
+  .slick-slide {
+    &.slcick-slide {
+      margin-left: 15px;
+    }
+  }
 `;
 
-// ! image 는 id 값을 이용해서 main${id}.png 식으로 가져오는게 어떨까?
-// ! sub1${item.id} 형식으로..? 헉스..
 const ImageSlider = ({ id }) => {
   const settings = {
     dots: false,
@@ -55,7 +58,21 @@ const ImageSlider = ({ id }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    responsive: [],
+    responsive: [
+      {
+        breakpoint: 752,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const SubpageData = workData.publishList
@@ -68,18 +85,20 @@ const ImageSlider = ({ id }) => {
       return (
         <ImageArea key={item.id}>
           <Row>
-            <Col>
+            <Col md={24}>
               {id == item.id ? (
                 <SliderWrap>
                   <Slider {...settings}>
-                    {item.subList.map((images, index) => {
+                    {item.subList.map((images) => {
                       return (
-                        <>
+                        <div key={images.name}>
                           <Card
-                            key={images.name}
                             className='crop'
                             hoverable
-                            style={{ width: 340 }}
+                            style={{ display: 'block', margin: '0.5rem' }}
+                            ls={6}
+                            md={6}
+                            xs={24}
                             cover={
                               <Image
                                 alt='example'
@@ -92,7 +111,7 @@ const ImageSlider = ({ id }) => {
                               description='Sub Page Image'
                             />
                           </Card>
-                        </>
+                        </div>
                       );
                     })}
                   </Slider>

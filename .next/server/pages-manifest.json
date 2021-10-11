@@ -3,6 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/portpolio/publisher/[id]": "pages/portpolio/publisher/[id].js",
-  "/": "pages/index.js",
-  "/portpolio/front/[id]": "pages/portpolio/front/[id].js"
+  "/": "pages/index.js"
 }

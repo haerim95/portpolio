@@ -45,7 +45,7 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
       </dl>
       <dl>
         <dt>작업 기간 : </dt>
-        <dd>{title}</dd>
+        <dd>{date}</dd>
       </dl>
       <dl>
         <dt>사용 언어 : </dt>
