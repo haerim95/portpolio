@@ -69,39 +69,35 @@ const ImageSlider = ({ id }) => {
         <ImageArea key={item.id}>
           <Row>
             <Col>
-              <ul>
-                <li>
-                  {id == item.id ? (
-                    <SliderWrap>
-                      <Slider {...settings}>
-                        {item.subList.map((images, index) => {
-                          return (
-                            <>
-                              <Card
-                                key={images.name}
-                                className='crop'
-                                hoverable
-                                style={{ width: 340, height: 240 }}
-                                cover={
-                                  <img
-                                    alt='example'
-                                    src={`/content/sub/${images.name}.png`}
-                                  />
-                                }
-                              >
-                                <Meta
-                                  title='Europe Street beat'
-                                  description='www.instagram.com'
-                                />
-                              </Card>
-                            </>
-                          );
-                        })}
-                      </Slider>
-                    </SliderWrap>
-                  ) : null}
-                </li>
-              </ul>
+              {id == item.id ? (
+                <SliderWrap>
+                  <Slider {...settings}>
+                    {item.subList.map((images, index) => {
+                      return (
+                        <>
+                          <Card
+                            key={images.name}
+                            className='crop'
+                            hoverable
+                            style={{ width: 340 }}
+                            cover={
+                              <Image
+                                alt='example'
+                                src={`/content/sub/${images.name}.png`}
+                              />
+                            }
+                          >
+                            <Meta
+                              title='서브페이지'
+                              description='Sub Page Image'
+                            />
+                          </Card>
+                        </>
+                      );
+                    })}
+                  </Slider>
+                </SliderWrap>
+              ) : null}
             </Col>
           </Row>
         </ImageArea>
