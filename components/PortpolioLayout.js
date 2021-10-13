@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import { Row, Col, Image } from 'antd';
 
 const WorkInfo = styled.div`
-  padding-top: 4rem;
   dl {
     display: flex;
     align-items: center;
@@ -43,10 +42,12 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
         <dt>프로젝트명 : </dt>
         <dd>{title}</dd>
       </dl>
-      <dl>
-        <dt>작업 기간 : </dt>
-        <dd>{date}</dd>
-      </dl>
+      {date === undefined ? null : (
+        <dl>
+          <dt>작업 기간 : </dt>
+          <dd>{date}</dd>
+        </dl>
+      )}
       <dl>
         <dt>사용 언어 : </dt>
         <dd>{skill}</dd>
@@ -71,7 +72,15 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
         </dl>
       )}
       <dl style={{ display: 'inline-block' }}>
-        <dt style={{ textAlign: 'center', maxWidth: '135px' }}>사이트 소개</dt>
+        <dt
+          style={{
+            textAlign: 'center',
+            maxWidth: '135px',
+            borderBottom: '1px solid #e7d8ee',
+          }}
+        >
+          사이트 소개
+        </dt>
         <dd style={{ fontSize: '0.9rem', marginTop: '1rem', paddingLeft: '0' }}>
           {information}
         </dd>
@@ -89,7 +98,8 @@ const PortpolioLayout = ({ id }) => {
 
   // 메인 이미지 영역 css
   const frame = {
-    height: '500px',
+    height: '100%',
+    maxHeight: '500px',
     overflow: 'hidden',
     overflowY: 'scroll',
     border: 'solid 1px #d6d6d6',
@@ -109,7 +119,7 @@ const PortpolioLayout = ({ id }) => {
       return (
         <div key={item.id}>
           <>
-            <Row>
+            <Row style={{ alignItems: 'center' }}>
               <Col md={12} xs={24}>
                 <Row>
                   <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
@@ -149,7 +159,7 @@ const PortpolioLayout = ({ id }) => {
       return (
         <div key={item.id}>
           <>
-            <Row>
+            <Row style={{ alignItems: 'center' }}>
               <Col md={12} xs={24}>
                 <Row>
                   <Col xs={24} md={24} style={{ padding: '0.5rem' }}>

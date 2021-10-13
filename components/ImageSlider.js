@@ -6,6 +6,7 @@ import { Card, Row, Col, Image } from 'antd';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import Video from './Video';
 
 const { Meta } = Card;
 
@@ -102,6 +103,7 @@ const ImageSlider = ({ id, search }) => {
                             cover={
                               <Image
                                 alt='example'
+                                style={{ maxHeight: '226px' }}
                                 src={`/content/sub/${images.name}.png`}
                               />
                             }
@@ -150,6 +152,7 @@ const ImageSlider = ({ id, search }) => {
                             cover={
                               <Image
                                 alt='example'
+                                style={{ maxHeight: '226px' }}
                                 src={`/content/sub/${images.name}.png`}
                               />
                             }
@@ -171,7 +174,17 @@ const ImageSlider = ({ id, search }) => {
       );
     });
 
-  return <>{search === 'front' ? frontSub : publishuerSub}</>;
+  return (
+    <>
+      {search === 'front' ? (
+        <>
+          <Video /> {frontSub}
+        </>
+      ) : (
+        publishuerSub
+      )}
+    </>
+  );
 };
 
 ImageSlider.propTypes = {

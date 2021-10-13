@@ -38,13 +38,13 @@
         "information": "PublishSoft Admin 페이지입니다. 고객사가 사용하기 편리하도록 UI가 만들어져있고, 원하는 테마를 선택할 수 있습니다. Fornt 홈페이지의 전반적인 관리와 메인페이지, 헤더, 컬러의 값도 원하는대로 커스텀 마이징이 가능한 사이트 입니다."
       },
       "image": {
-        "main": "publishSoftFront"
+        "main": "publishSoftAdmin"
       },
       "subList": [
-        { "name": "softFront1" },
-        { "name": "softFront2" },
-        { "name": "softFront3" },
-        { "name": "softFront4" }
+        { "name": "softAdmin1" },
+        { "name": "softAdmin2" },
+        { "name": "softAdmin3" },
+        { "name": "softAdmin4" }
       ],
       "img": "publishsoftAdmin1"
     },
@@ -81,6 +81,15 @@
         "url": "https://kina.or.kr",
         "information": "인터넷 신문 협회 입니다. 웹 / 모바일 퍼블리싱 작업을 적응형으로 작업하였습니다."
       },
+      "image": {
+        "main": "internetNews"
+      },
+      "subList": [
+        { "name": "internetNews1" },
+        { "name": "internetNews2" },
+        { "name": "internetNews3" },
+        { "name": "internetNews4" }
+      ],
       "img": "internetNews"
     },
     {
@@ -94,7 +103,39 @@
         "url": "https://klb.news/",
         "information": "KLB 입니다. 웹 / 모바일 퍼블리싱 작업을 적응형으로 작업하였습니다."
       },
+      "image": {
+        "main": "klb"
+      },
+      "subList": [
+        { "name": "klb1" },
+        { "name": "klb2" },
+        { "name": "klb3" },
+        { "name": "klb4" }
+      ],
       "img": "klb"
+    },
+    {
+      "id": 14,
+      "name": "publisher",
+      "title": "알래스카 판다 Admin",
+      "explain": {
+        "title": "알래스카 판다 Admin Page",
+        "work": "퍼블리싱 / 유지보수",
+        "skill": "html / css / jquery / js",
+        "url": "",
+        "closed": "내부 서비스",
+        "information": "소상공인을 위한 안드로이드 앱 어플리케이션 `알래스카 판다` 의 Admin 페이지 입니다."
+      },
+      "image": {
+        "main": "akPanda"
+      },
+      "subList": [
+        { "name": "akPanda1" },
+        { "name": "akPanda2" },
+        { "name": "akPanda3" },
+        { "name": "akPanda4" }
+      ],
+      "img": "akPanda"
     },
     {
       "id": 5,
@@ -132,8 +173,17 @@
         "skill": "html / css / jquery / js",
         "url": "",
         "closed": "오픈 예정",
-        "information": ""
+        "information": "퍼블리시 링크 웹/모바일 적응형 퍼블리싱을 작업하였습니다. iframe을 이용하여, 연결된 타 사이트에서 위젯을 구현하는 작업을 진행하였습니다."
       },
+      "image": {
+        "main": "link"
+      },
+      "subList": [
+        { "name": "link1" },
+        { "name": "link2" },
+        { "name": "link3" },
+        { "name": "link4" }
+      ],
       "img": "link"
     },
     {
@@ -146,8 +196,19 @@
         "skill": "html / css / jquery / js",
         "url": "",
         "closed": "서비스 중단",
-        "information": ""
+        "information": "가상화폐 뉴스 및 커뮤니티 사이트 코인고스트 version 1 입니다. 웹 / 모바일을 적응형으로 퍼블리싱 작업하였습니다."
       },
+      "image": {
+        "main": "cg"
+      },
+      "subList": [
+        { "name": "cg1" },
+        { "name": "cg2" },
+        { "name": "cg3" },
+        { "name": "cg4" },
+        { "name": "cg5" },
+        { "name": "cg6" }
+      ],
       "img": "cg"
     },
     {
@@ -160,8 +221,17 @@
         "skill": "html / css / jquery / js",
         "url": "",
         "closed": "서비스 중단",
-        "information": ""
+        "information": "가상화폐 뉴스 및 커뮤니티 사이트 코인고스트 version 2 입니다. version1 의 메인 디자인을 대폭 수정된 버전입니다. 웹 / 모바일을 적응형으로 퍼블리싱 작업하였습니다."
       },
+      "image": {
+        "main": "cg2"
+      },
+      "subList": [
+        { "name": "cg21" },
+        { "name": "cg22" },
+        { "name": "cg23" },
+        { "name": "cg24" }
+      ],
       "img": "cg2"
     },
     {
@@ -170,7 +240,7 @@
       "title": "본다빈치",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
-        "work": "퍼블리싱 / 유지보수",
+        "work": "유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.bondavinci.com/",
         "information": ""
@@ -183,7 +253,7 @@
       "title": "빅이슈 Korea",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
-        "work": "퍼블리싱 / 유지보수",
+        "work": "유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://bigissue.kr/",
         "information": ""
