@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import workData from './workData.json';
 import ImageSlider from './ImageSlider';
@@ -11,8 +11,8 @@ const WorkInfo = styled.div`
     display: flex;
     align-items: center;
     dt {
-      flex-basis: 135px;
-      min-width: 135px;
+      flex-basis: 140px;
+      min-width: 140px;
       font-size: 1.2rem;
       font-weight: 700;
       text-align: right;
@@ -66,7 +66,7 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
         </dl>
       ) : (
         <dl>
-          <dt>Git repository : </dt>
+          <dt>Git : </dt>
           <dd>{git}</dd>
         </dl>
       )}
@@ -84,6 +84,8 @@ const PortpolioLayout = ({ id }) => {
   // front / publish 나누기
   const current = decodeURI(window.location.href);
   const search = current.split(`/`)[4];
+
+  console.log('나는...', search);
 
   // 메인 이미지 영역 css
   const frame = {
@@ -108,50 +110,7 @@ const PortpolioLayout = ({ id }) => {
         <div key={item.id}>
           <>
             <Row>
-              <Col md={24}>
-                <Row>
-                  <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
-                    <div style={frame}>
-                      <Image
-                        height={500}
-                        src={`/content/main/${item.image.main}.png`}
-                      />
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-              <Col xs={24} md={12} style={{ padding: '0.5rem' }}>
-                <WorkInfo>
-                  <Info
-                    title={item.title}
-                    git={item.explain.git}
-                    url={item.explain.url}
-                    work={item.explain.work}
-                    skill={item.explain.skill}
-                    date={item.explain.date}
-                    information={item.explain.information}
-                  />
-                </WorkInfo>
-              </Col>
-            </Row>
-            <ImageSlider id={item.id} />
-          </>
-        </div>
-      );
-    });
-  // filter로 걸러주고 map 으로 데이터 받아오기 - 퍼블리셔 리스트
-  const publisher = workData.publishList
-    .filter((item) => {
-      if (id == item.id) {
-        return item;
-      }
-    })
-    .map((item) => {
-      return (
-        <div key={item.id}>
-          <>
-            <Row>
-              <Col md={12}>
+              <Col md={12} xs={24}>
                 <Row>
                   <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
                     <div style={frame}>
@@ -174,7 +133,47 @@ const PortpolioLayout = ({ id }) => {
                 </WorkInfo>
               </Col>
             </Row>
-            <ImageSlider id={item.id} />
+            <ImageSlider id={item.id} search={search} />
+          </>
+        </div>
+      );
+    });
+  // filter로 걸러주고 map 으로 데이터 받아오기 - 퍼블리셔 리스트
+  const publisher = workData.publishList
+    .filter((item) => {
+      if (id == item.id) {
+        return item;
+      }
+    })
+    .map((item) => {
+      return (
+        <div key={item.id}>
+          <>
+            <Row>
+              <Col md={12} xs={24}>
+                <Row>
+                  <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
+                    <div style={frame}>
+                      <Image src={`/content/main/${item.image.main}.png`} />
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col xs={24} md={12} style={{ padding: '0.5rem' }}>
+                <WorkInfo>
+                  <Info
+                    title={item.title}
+                    git={item.explain.git}
+                    url={item.explain.url}
+                    work={item.explain.work}
+                    skill={item.explain.skill}
+                    date={item.explain.date}
+                    information={item.explain.information}
+                  />
+                </WorkInfo>
+              </Col>
+            </Row>
+            <ImageSlider id={item.id} search={search} />
           </>
         </div>
       );

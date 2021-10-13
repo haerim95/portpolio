@@ -51,7 +51,7 @@ const SliderWrap = styled.div`
   }
 `;
 
-const ImageSlider = ({ id }) => {
+const ImageSlider = ({ id, search }) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -75,7 +75,7 @@ const ImageSlider = ({ id }) => {
     ],
   };
 
-  const SubpageData = workData.publishList
+  const frontSub = workData.frontendList
     .filter((item) => {
       if (id == item.id) {
         return item;
@@ -123,11 +123,60 @@ const ImageSlider = ({ id }) => {
       );
     });
 
-  return <>{SubpageData}</>;
+  const publishuerSub = workData.publishList
+    .filter((item) => {
+      if (id == item.id) {
+        return item;
+      }
+    })
+    .map((item) => {
+      return (
+        <ImageArea key={item.id}>
+          <Row>
+            <Col md={24}>
+              {id == item.id ? (
+                <SliderWrap>
+                  <Slider {...settings}>
+                    {item.subList.map((images) => {
+                      return (
+                        <div key={images.name}>
+                          <Card
+                            className='crop'
+                            hoverable
+                            style={{ display: 'block', margin: '0.5rem' }}
+                            ls={6}
+                            md={6}
+                            xs={24}
+                            cover={
+                              <Image
+                                alt='example'
+                                src={`/content/sub/${images.name}.png`}
+                              />
+                            }
+                          >
+                            <Meta
+                              title='서브페이지'
+                              description='Sub Page Image'
+                            />
+                          </Card>
+                        </div>
+                      );
+                    })}
+                  </Slider>
+                </SliderWrap>
+              ) : null}
+            </Col>
+          </Row>
+        </ImageArea>
+      );
+    });
+
+  return <>{search === 'front' ? frontSub : publishuerSub}</>;
 };
 
 ImageSlider.propTypes = {
   id: PropTypes.any.isRequired,
+  search: PropTypes.any.isRequired,
 };
 
 export default ImageSlider;

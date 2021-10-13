@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Row, Col } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
+import Footer from './Footer';
 
 const Header = styled.div`
   width: 100%;
@@ -50,6 +51,7 @@ const AppLayout = ({ children }) => {
           {children}
         </Col>
       </Row>
+      <Footer />
     </div>
   );
 };

@@ -11,7 +11,7 @@
         "date": "2021.07.21 ~ 2021.08.11",
         "url": "",
         "git": "https://github.com/haerim95/travelary",
-        "information": "react.js 와 node.js 를 이용한 개인 여행 블로그 웹어플리케이션 입니다. Redux와 Redux-saga를 이용하여 상태 관리를 하였고, JWT 토큰을 발행하여 회원가입을 진행하였습니다."
+        "information": "react.js 와 node.js 를 이용한 2인 팀프로젝트, 개인 여행 블로그 웹어플리케이션 입니다. Redux와 Redux-saga를 이용하여 상태 관리를 하였고, JWT 토큰을 발행하여 회원가입을 진행하였습니다."
       },
       "image": {
         "main": "travelary"
@@ -37,6 +37,15 @@
         "url": "https://publishinc.io/en/apps",
         "information": "PublishSoft Admin 페이지입니다. 고객사가 사용하기 편리하도록 UI가 만들어져있고, 원하는 테마를 선택할 수 있습니다. Fornt 홈페이지의 전반적인 관리와 메인페이지, 헤더, 컬러의 값도 원하는대로 커스텀 마이징이 가능한 사이트 입니다."
       },
+      "image": {
+        "main": "publishSoftFront"
+      },
+      "subList": [
+        { "name": "softFront1" },
+        { "name": "softFront2" },
+        { "name": "softFront3" },
+        { "name": "softFront4" }
+      ],
       "img": "publishsoftAdmin1"
     },
     {
