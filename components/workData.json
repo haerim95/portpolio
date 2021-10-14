@@ -146,8 +146,17 @@
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.tokenpost.kr/",
-        "information": ""
+        "information": "암호화폐 뉴스 사이트 토큰포스트의 유지보수와 새 페이지 퍼블리싱 등을 작업하였습니다."
       },
+      "image": {
+        "main": "tp"
+      },
+      "subList": [
+        { "name": "tokenpost1" },
+        { "name": "tokenpost2" },
+        { "name": "tokenpost3" },
+        { "name": "tokenpost4" }
+      ],
       "img": "tp"
     },
     {
@@ -159,8 +168,17 @@
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.econotimes.com/",
-        "information": ""
+        "information": "국제 경제 신문 사이트 EconoTimes 사이트 입니다. 웹, 모바일 페이지의 유지보수를 작업하였습니다."
       },
+      "image": {
+        "main": "econotimes"
+      },
+      "subList": [
+        { "name": "econo1" },
+        { "name": "econo2" },
+        { "name": "econo3" },
+        { "name": "econo4" }
+      ],
       "img": "econotimes"
     },
     {
@@ -243,8 +261,17 @@
         "work": "유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.bondavinci.com/",
-        "information": ""
+        "information": "본다빈치 뮤지엄 사이트 입니다. 웹 / 모바일 페이지를 유지보수 하였습니다. 또한 전용 Admin 페이지를 퍼블리싱 하였습니다."
       },
+      "image": {
+        "main": "bdvc"
+      },
+      "subList": [
+        { "name": "bdvc1" },
+        { "name": "bdvc2" },
+        { "name": "bdvc3" },
+        { "name": "bdvc4" }
+      ],
       "img": "bdvc"
     },
     {
@@ -256,8 +283,17 @@
         "work": "유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://bigissue.kr/",
-        "information": ""
+        "information": "빅이슈 코리아 사이트 입니다. 웹 / 모바일 페이지를 유지보수 하였습니다. 또한 전용 Admin 페이지를 퍼블리싱 하였습니다."
       },
+      "image": {
+        "main": "bi"
+      },
+      "subList": [
+        { "name": "bi1" },
+        { "name": "bi2" },
+        { "name": "bi3" },
+        { "name": "bi4" }
+      ],
       "img": "bis"
     },
     {
@@ -269,22 +305,40 @@
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://publishprotocol.io/",
-        "information": ""
+        "information": "Publish Protocol 영문 사이트 입니다. 웹 페이지의 유지보수와 모바일 페이지의 퍼블리싱을 작업하였습니다."
       },
+      "image": {
+        "main": "protocol"
+      },
+      "subList": [
+        { "name": "protocol1" },
+        { "name": "protocol2" },
+        { "name": "protocol3" },
+        { "name": "protocol4" }
+      ],
       "img": "protocol"
     },
     {
       "id": 12,
       "name": "publisher",
-      "title": "Publish Toolkit",
+      "title": "Publish Protocol",
       "explain": {
         "title": "퍼블리시 소프트 Admin Page",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "",
         "closed": "서비스 중단",
-        "information": "react.js 를 이용하여 퍼블리싱 작업을 진행하였습니다. Class형 리액트를 사용한 프로젝트입니다."
+        "information": "react.js 를 이용하여 퍼블리싱 작업을 진행하였습니다. Class형 리액트를 사용한 프로젝트입니다. 리액트를 이용하여 퍼블리싱 및 간단한 기능 구현을 하였습니다."
       },
+      "image": {
+        "main": "toolkit"
+      },
+      "subList": [
+        { "name": "publishProtocol1" },
+        { "name": "publishProtocol2" },
+        { "name": "publishProtocol3" },
+        { "name": "publishProtocol4" }
+      ],
       "img": "toolkit"
     }
   ]

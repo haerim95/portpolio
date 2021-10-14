@@ -9,7 +9,7 @@ const FooterArea = styled.div`
 
 const Footer = () => {
   return (
-    <FooterArea>
+    <FooterArea className='footerWrap'>
       <p>
         <PhoneOutlined /> 010-9405-0219
       </p>

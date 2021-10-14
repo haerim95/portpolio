@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import workData from './workData.json';
 import ImageSlider from './ImageSlider';
@@ -94,8 +94,6 @@ const PortpolioLayout = ({ id }) => {
   const current = decodeURI(window.location.href);
   const search = current.split(`/`)[4];
 
-  console.log('나는...', search);
-
   // 메인 이미지 영역 css
   const frame = {
     height: '100%',
@@ -189,7 +187,11 @@ const PortpolioLayout = ({ id }) => {
       );
     });
 
-  return <div>{search === 'front' ? front : publisher}</div>;
+  return (
+    <div style={{ minHeight: '85vh' }}>
+      {search === 'front' ? front : publisher}
+    </div>
+  );
 };
 
 PortpolioLayout.propTypes = {
