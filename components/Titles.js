@@ -13,6 +13,9 @@ const StyledTitle = styled.p`
     background-color: #e7d8ee;
     color: #5e4462;
   }
+  .info {
+    width: 100%;
+  }
 `;
 
 const Titles = ({ children }) => {

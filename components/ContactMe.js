@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Input, Button } from 'antd';
 import StyledTitle from './Titles';
+import { init } from 'emailjs-com';
+import { send } from 'emailjs-com';
+
+const onSubmit = (e) => {
+  send('ajmhoho', 'template_sv21t8n');
+};
 
 const layout = {
   labelCol: {
@@ -12,6 +18,10 @@ const layout = {
 };
 
 const ContactMe = () => {
+  useEffect(() => {
+    init('user_O303wSkf7tVofLIJptu7o');
+  }, []);
+
   return (
     <div style={{ marginBottom: '4rem' }}>
       <StyledTitle>
@@ -20,7 +30,7 @@ const ContactMe = () => {
       <div style={{ width: '80%' }}>
         <Form
           {...layout}
-          name='nest-messages'
+          name='messages'
           // onFinish={onFinish}
           // validateMessages={validateMessages}
         >
