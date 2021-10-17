@@ -9,13 +9,23 @@ import { Row, Col } from 'antd';
 const Form = styled.form`
   background-color: #5e4462;
   padding: 2rem 4rem;
+  p {
+    color: #ffffff;
+    text-align: center;
+    span {
+      font-size: 0.8rem;
+      display: inline-block;
+      width: 100%;
+      color: #9e9e9e;
+    }
+  }
   div {
     + div {
       margin-top: 1rem;
     }
   }
   label {
-    line-height: 24px;
+    line-height: 28px;
     display: inline-block;
     text-align: right;
     font-size: 14px !important;
@@ -31,12 +41,13 @@ const Form = styled.form`
     outline: none;
     color: #e7d8ee;
     ::placeholder {
+      font-size: 12px;
       color: #e7d8ee;
     }
   }
   textarea {
     width: 100%;
-    height: calc(100% - 24px);
+    height: calc(100% - 28px);
     padding: 10px;
     vertical-align: top;
     border: 1px solid #eeeeee;
@@ -54,6 +65,7 @@ const Form = styled.form`
       width: 100px;
       height: 40px;
       border-radius: 5px;
+      cursor: pointer;
       background-color: #e7d8ee;
       border: 1px solid #e7d8ee;
       color: #5e4462;
@@ -115,6 +127,10 @@ const ContactMe = () => {
       </StyledTitle>
 
       <Form onSubmit={onSubmit}>
+        <p>
+          제 포트폴리오를 보고 마음에 드셨다면 언제든 연락해주세요! 🥰💕
+          <span>답장은 이틀 정도 소요될 수 있습니다! </span>
+        </p>
         <Row>
           <Col xs={24} md={12} style={{ paddingRight: '3rem' }}>
             <div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import workData from './workData.json';
 import ImageSlider from './ImageSlider';
@@ -56,7 +56,7 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
         <dt>작업 내용 : </dt>
         <dd>{work}</dd>
       </dl>
-      {url !== '' ? (
+      {JSON.hasOwnProperty[url] ? (
         <dl>
           <dt>사이트 URL : </dt>
           <dd>
@@ -65,12 +65,7 @@ const Info = ({ title, date, skill, work, url, git, information }) => {
             </a>
           </dd>
         </dl>
-      ) : (
-        <dl>
-          <dt>Git : </dt>
-          <dd>{git}</dd>
-        </dl>
-      )}
+      ) : null}
       <dl style={{ display: 'inline-block' }}>
         <dt
           style={{
@@ -188,7 +183,15 @@ const PortpolioLayout = ({ id }) => {
     });
 
   return (
-    <div style={{ minHeight: '85vh' }}>
+    <div
+      style={{
+        minHeight: '85vh',
+        // display: 'flex',
+        // flexDirection: 'row',
+        // alignItems: 'center',
+        // justifyItems: 'center',
+      }}
+    >
       {search === 'front' ? front : publisher}
     </div>
   );

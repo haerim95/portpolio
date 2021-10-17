@@ -17,7 +17,15 @@ const Portpolio = () => {
       </Head>
       <AppLayout>
         {workData.frontendList.map((item) => (
-          <div key={item.id}>
+          <div
+            key={item.id}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyItems: 'center',
+            }}
+          >
             {id == item.id ? (
               <PortpolioLayout id={item.id} />
             ) : (
