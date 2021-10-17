@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import workData from './workData.json';
-import { Card, Row, Col, Image, Layout } from 'antd';
+import { Card, Row, Col, Image } from 'antd';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import Video from './Video';
 
 const { Meta } = Card;
-const { Content } = Layout;
 
 const ImageArea = styled.div`
   padding: 1rem;
@@ -56,27 +55,26 @@ const ImageSlider = ({ id, search }) => {
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    variableWidth: true,
-    // responsive: [
-    //   {
-    //     breakpoint: 752,
-    //     settings: {
-    //       dots: false,
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 500,
-    //     settings: {
-    //       dots: false,
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 820,
+        settings: {
+          dots: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const frontSub = workData.frontendList
@@ -94,31 +92,27 @@ const ImageSlider = ({ id, search }) => {
                 <Slider {...settings}>
                   {item.subList.map((images, index) => {
                     return (
-                      <Content key={index} ls={6} md={12} xs={24}>
-                        <Card
-                          className='crop'
-                          hoverable
-                          style={{
-                            display: 'block',
-                            margin: '0.5rem',
-                          }}
-                          ls={6}
-                          md={12}
-                          xs={24}
-                          cover={
-                            <Image
-                              alt='example'
-                              style={{ maxHeight: '226px' }}
-                              src={`/content/sub/${images.name}.png`}
-                            />
-                          }
-                        >
-                          <Meta
-                            title='서브페이지'
-                            description='Sub Page Image'
+                      <Card
+                        key={index}
+                        xs={24}
+                        md={12}
+                        ls={6}
+                        className='crop'
+                        hoverable
+                        style={{
+                          display: 'block',
+                          margin: '0.5rem',
+                        }}
+                        cover={
+                          <Image
+                            alt='example'
+                            style={{ maxHeight: '226px' }}
+                            src={`/content/sub/${images.name}.png`}
                           />
-                        </Card>
-                      </Content>
+                        }
+                      >
+                        <Meta title='서브페이지' description='Sub Page Image' />
+                      </Card>
                     );
                   })}
                 </Slider>
