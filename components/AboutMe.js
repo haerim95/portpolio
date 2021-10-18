@@ -111,7 +111,10 @@ const AboutMe = () => {
         </Col>
         <Col xs={24} md={8} xl={8}>
           <ProfileImg>
-            <Image src={Profile} alt='프로필 이미지' />
+            <Image
+              src={process.env.BACKEND_URL + '/public/img/profile.jpeg'}
+              alt='프로필 이미지'
+            />
           </ProfileImg>
         </Col>
       </Row>
