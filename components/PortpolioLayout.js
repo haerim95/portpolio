@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import workData from './workData.json';
 import ImageSlider from './ImageSlider';
 import styled from 'styled-components';
+import Info from './Info';
 import { Row, Col, Image } from 'antd';
 
 const WorkInfo = styled.div`
@@ -35,55 +36,6 @@ const WorkInfo = styled.div`
   }
 `;
 
-const Info = ({ title, date, skill, work, url, git, information }) => {
-  return (
-    <>
-      <dl>
-        <dt>프로젝트명 : </dt>
-        <dd>{title}</dd>
-      </dl>
-      {date === undefined ? null : (
-        <dl>
-          <dt>작업 기간 : </dt>
-          <dd>{date}</dd>
-        </dl>
-      )}
-      <dl>
-        <dt>사용 언어 : </dt>
-        <dd>{skill}</dd>
-      </dl>
-      <dl>
-        <dt>작업 내용 : </dt>
-        <dd>{work}</dd>
-      </dl>
-      {JSON.hasOwnProperty[url] ? (
-        <dl>
-          <dt>사이트 URL : </dt>
-          <dd>
-            <a href={url} target='_blank' rel='noreferrer'>
-              {url}
-            </a>
-          </dd>
-        </dl>
-      ) : null}
-      <dl style={{ display: 'inline-block' }}>
-        <dt
-          style={{
-            textAlign: 'center',
-            maxWidth: '135px',
-            borderBottom: '1px solid #e7d8ee',
-          }}
-        >
-          사이트 소개
-        </dt>
-        <dd style={{ fontSize: '0.9rem', marginTop: '1rem', paddingLeft: '0' }}>
-          {information}
-        </dd>
-      </dl>
-    </>
-  );
-};
-
 const PortpolioLayout = ({ id }) => {
   // front / publish 나누기
   const current = decodeURI(window.location.href);
@@ -110,7 +62,16 @@ const PortpolioLayout = ({ id }) => {
     })
     .map((item) => {
       return (
-        <div key={item.id}>
+        <div
+          key={item.id}
+          style={{
+            display: 'flex',
+            width: '100%',
+            minHeight: '85vh',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
           <>
             <Row style={{ alignItems: 'center' }}>
               <Col md={12} xs={24}>
@@ -136,7 +97,11 @@ const PortpolioLayout = ({ id }) => {
                 </WorkInfo>
               </Col>
             </Row>
-            <ImageSlider id={item.id} search={search} />
+            <ImageSlider
+              id={item.id}
+              search={search}
+              style={{ width: '100%' }}
+            />
           </>
         </div>
       );
@@ -150,9 +115,18 @@ const PortpolioLayout = ({ id }) => {
     })
     .map((item) => {
       return (
-        <div key={item.id}>
-          <>
-            <Row style={{ alignItems: 'center' }}>
+        <div
+          key={item.id}
+          style={{
+            display: 'flex',
+            width: '100%',
+            minHeight: '85vh',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <div>
+            <Row>
               <Col md={12} xs={24}>
                 <Row>
                   <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
@@ -176,39 +150,21 @@ const PortpolioLayout = ({ id }) => {
                 </WorkInfo>
               </Col>
             </Row>
-            <ImageSlider id={item.id} search={search} />
-          </>
+            <ImageSlider
+              id={item.id}
+              search={search}
+              style={{ width: '100%' }}
+            />
+          </div>
         </div>
       );
     });
 
-  return (
-    <div
-      style={{
-        minHeight: '85vh',
-        // display: 'flex',
-        // flexDirection: 'row',
-        // alignItems: 'center',
-        // justifyItems: 'center',
-      }}
-    >
-      {search === 'front' ? front : publisher}
-    </div>
-  );
+  return <div>{search === 'front' ? front : publisher}</div>;
 };
 
 PortpolioLayout.propTypes = {
   id: PropTypes.any.isRequired,
-};
-
-Info.propTypes = {
-  title: PropTypes.node.isRequired,
-  url: PropTypes.node.isRequired,
-  work: PropTypes.node.isRequired,
-  git: PropTypes.node.isRequired,
-  date: PropTypes.node.isRequired,
-  skill: PropTypes.node.isRequired,
-  information: PropTypes.string.isRequired,
 };
 
 export default PortpolioLayout;

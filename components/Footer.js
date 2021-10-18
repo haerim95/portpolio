@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { PhoneOutlined, MailOutlined, GithubOutlined } from '@ant-design/icons';
 
 const FooterArea = styled.div`
-  padding: 2.5rem 4rem;
+  padding: 2rem 4rem 1rem;
   background: #ededed;
 `;
 
@@ -23,6 +23,8 @@ const Footer = () => {
           </a>
         </span>
       </p>
+
+      <p style={{ textAlign: 'center', color: '#999999' }}>Copyright 2021.</p>
     </FooterArea>
   );
 };

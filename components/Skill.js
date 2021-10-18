@@ -17,43 +17,45 @@ const Skill = () => {
   const data = [
     {
       title: 'React.js',
-      img: <Image src={require('../public/img/react.png')} />,
+      img: <Image preview={false} src={require('../public/img/react.png')} />,
     },
     {
       title: 'Javascript',
-      img: <Image src={require('../public/img/javascript.png')} />,
+      img: (
+        <Image preview={false} src={require('../public/img/javascript.png')} />
+      ),
     },
     {
       title: 'CSS',
-      img: <Image src={require('../public/img/css.png')} />,
+      img: <Image preview={false} src={require('../public/img/css.png')} />,
     },
     {
       title: 'Sass',
-      img: <Image src={require('../public/img/sass.png')} />,
+      img: <Image preview={false} src={require('../public/img/sass.png')} />,
     },
     {
       title: 'Git',
-      img: <Image src={require('../public/img/git.png')} />,
+      img: <Image preview={false} src={require('../public/img/git.png')} />,
     },
     {
       title: 'node.js',
-      img: <Image src={require('../public/img/node.png')} />,
+      img: <Image preview={false} src={require('../public/img/node.png')} />,
     },
     {
       title: 'Express',
-      img: <Image src={require('../public/img/express.png')} />,
+      img: <Image preview={false} src={require('../public/img/express.png')} />,
     },
     {
       title: 'Jquery',
-      img: <Image src={require('../public/img/jquery.png')} />,
+      img: <Image preview={false} src={require('../public/img/jquery.png')} />,
     },
     {
       title: 'MySQL',
-      img: <Image src={require('../public/img/mysql.png')} />,
+      img: <Image preview={false} src={require('../public/img/mysql.png')} />,
     },
     {
       title: 'Azure',
-      img: <Image src={require('../public/img/azure.png')} />,
+      img: <Image preview={false} src={require('../public/img/azure.png')} />,
     },
   ];
 

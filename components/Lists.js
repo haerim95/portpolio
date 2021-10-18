@@ -10,7 +10,7 @@ const StyledList = styled.ul`
   flex-wrap: wrap;
   list-style: none;
   li {
-    width: 32%;
+    width: 100%;
     padding: 1rem 2rem 0;
     display: inline-block;
     text-align: center;
@@ -28,6 +28,11 @@ const StyledList = styled.ul`
       font-weight: bold;
       color: #5e4462;
     }
+  }
+  .singleList {
+    margin-top: 10px;
+    padding: 0;
+    width: 322px;
   }
   img {
     max-width: 100%;

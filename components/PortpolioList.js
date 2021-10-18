@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Tabs } from 'antd';
+import { Col, Row, Tabs } from 'antd';
 import StyledTitle from './Titles';
 import StyledList from './Lists';
 import workData from './workData.json';
@@ -62,7 +62,7 @@ const PortpolioList = () => {
           <StyledList>
             {workData.frontendList.map((list) => {
               return (
-                <li key={list.id}>
+                <li key={list.id} className='singleList'>
                   <HoverItem
                     src={`/list/${list.img}.png`}
                     list={list.explain}
@@ -84,23 +84,27 @@ const PortpolioList = () => {
             🍎 웹 퍼블리셔로 근무하며 작업한 작업물 입니다.
           </p>
           <StyledList>
-            {workData.publishList.map((list) => {
-              return (
-                <li key={list.id}>
-                  <HoverItem
-                    src={`/list/${list.img}.png`}
-                    list={list.explain}
-                    id={list.id}
-                    name={list.name}
-                  />
-                  <Link href={`/portpolio/${list.name}/${list.id}`}>
-                    <a>
-                      <p>{list.title}</p>
-                    </a>
-                  </Link>
-                </li>
-              );
-            })}
+            <Row>
+              {workData.publishList.map((list) => {
+                return (
+                  <Col key={list.id} md={8} xs={12}>
+                    <li>
+                      <HoverItem
+                        src={`/list/${list.img}.png`}
+                        list={list.explain}
+                        id={list.id}
+                        name={list.name}
+                      />
+                      <Link href={`/portpolio/${list.name}/${list.id}`}>
+                        <a>
+                          <p>{list.title}</p>
+                        </a>
+                      </Link>
+                    </li>
+                  </Col>
+                );
+              })}
+            </Row>
           </StyledList>
         </TabPane>
       </Tabs>

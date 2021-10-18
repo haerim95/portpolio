@@ -88,35 +88,44 @@ const ImageSlider = ({ id, search }) => {
         <ImageArea key={item.id}>
           <Row>
             <Col md={24}>
-              <SliderWrap>
-                <Slider {...settings}>
-                  {item.subList.map((images, index) => {
-                    return (
-                      <Card
-                        key={index}
-                        xs={24}
-                        md={12}
-                        ls={6}
-                        className='crop'
-                        hoverable
-                        style={{
-                          display: 'block',
-                          margin: '0.5rem',
-                        }}
-                        cover={
-                          <Image
-                            alt='example'
-                            style={{ maxHeight: '226px' }}
-                            src={`/content/sub/${images.name}.png`}
-                          />
-                        }
-                      >
-                        <Meta title='서브페이지' description='Sub Page Image' />
-                      </Card>
-                    );
-                  })}
-                </Slider>
-              </SliderWrap>
+              <div>
+                {id == item.id ? (
+                  <SliderWrap>
+                    <Slider {...settings}>
+                      {item.subList.map((images, index) => {
+                        return (
+                          <div key={index}>
+                            <Card
+                              key={index}
+                              xs={24}
+                              md={12}
+                              ls={6}
+                              className='crop'
+                              hoverable
+                              style={{
+                                display: 'block',
+                                margin: '0.5rem',
+                              }}
+                              cover={
+                                <Image
+                                  alt='example'
+                                  style={{ maxHeight: '226px' }}
+                                  src={`/content/sub/${images.name}.png`}
+                                />
+                              }
+                            >
+                              <Meta
+                                title='서브페이지'
+                                description='Sub Page Image'
+                              />
+                            </Card>
+                          </div>
+                        );
+                      })}
+                    </Slider>
+                  </SliderWrap>
+                ) : null}
+              </div>
             </Col>
           </Row>
         </ImageArea>
