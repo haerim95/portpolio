@@ -96,10 +96,6 @@ const ImageSlider = ({ id, search }) => {
                         return (
                           <div key={index}>
                             <Card
-                              key={index}
-                              xs={24}
-                              md={12}
-                              ls={6}
                               className='crop'
                               hoverable
                               style={{

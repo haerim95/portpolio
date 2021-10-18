@@ -72,8 +72,8 @@ const PortpolioLayout = ({ id }) => {
             justifyContent: 'center',
           }}
         >
-          <>
-            <Row style={{ alignItems: 'center' }}>
+          <div>
+            <Row>
               <Col md={12} xs={24}>
                 <Row>
                   <Col xs={24} md={24} style={{ padding: '0.5rem' }}>
@@ -102,7 +102,7 @@ const PortpolioLayout = ({ id }) => {
               search={search}
               style={{ width: '100%' }}
             />
-          </>
+          </div>
         </div>
       );
     });

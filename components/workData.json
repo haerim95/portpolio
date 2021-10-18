@@ -7,6 +7,8 @@
       "explain": {
         "title": "개인 여행 블로그 Travelary",
         "work": "front-end / back-end",
+        "url": "",
+        "closed": "준비 중",
         "skill": "react / node express / my sql",
         "date": "2021.07.21 ~ 2021.08.11",
         "git": "https://github.com/haerim95/travelary",
