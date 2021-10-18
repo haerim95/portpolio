@@ -1,66 +1,33 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-555defa4e62ba07d4446.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/ekYAOMxxJkANOb7UVafos/_buildManifest.js",
-    "static/ekYAOMxxJkANOb7UVafos/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/main-24fb4026de0bd559f478.js",
-      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
-      "static/chunks/framework.fadea2de77b9596ceff1.js",
-      "static/chunks/99bbe09d61f77172bcc2d9e02119eacb81e5fc70.5f428567be5effb950a3.js",
-      "static/chunks/938f0c6b1a050c1868bc7d5c56e57f3fff133841.f5f2847e6a29fcde91af.js",
-      "static/chunks/85cd321bf89e83267a34dc46c32ba5e597a84a8a.6784a40d081b9a188afb.js",
-      "static/chunks/pages/index-bc0d72d50a2070e9e7a0.js"
-    ],
-    "/TypingIndex": [
-      "static/chunks/main-24fb4026de0bd559f478.js",
-      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
-      "static/chunks/framework.fadea2de77b9596ceff1.js",
-      "static/chunks/938f0c6b1a050c1868bc7d5c56e57f3fff133841.f5f2847e6a29fcde91af.js",
-      "static/chunks/pages/TypingIndex-30c0c24c261b73b95bc0.js"
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/index.js"
     ],
     "/_app": [
-      "static/chunks/main-24fb4026de0bd559f478.js",
-      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
-      "static/chunks/framework.fadea2de77b9596ceff1.js",
-      "static/css/6b4a8993a1bc12bd92e7.css",
-      "static/chunks/649b5823.4d62413f4da81be1e932.js",
-      "static/chunks/99bbe09d61f77172bcc2d9e02119eacb81e5fc70.5f428567be5effb950a3.js",
-      "static/chunks/pages/_app-791b0e27704feb2b7832.js"
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/main-24fb4026de0bd559f478.js",
-      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
-      "static/chunks/framework.fadea2de77b9596ceff1.js",
-      "static/chunks/pages/_error-e5b7d3ac1dd21e84a093.js"
-    ],
-    "/portpolio/front/[id]": [
-      "static/chunks/main-24fb4026de0bd559f478.js",
-      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
-      "static/chunks/framework.fadea2de77b9596ceff1.js",
-      "static/chunks/99bbe09d61f77172bcc2d9e02119eacb81e5fc70.5f428567be5effb950a3.js",
-      "static/chunks/938f0c6b1a050c1868bc7d5c56e57f3fff133841.f5f2847e6a29fcde91af.js",
-      "static/chunks/85cd321bf89e83267a34dc46c32ba5e597a84a8a.6784a40d081b9a188afb.js",
-      "static/chunks/08c6acedda0d10f7e3d654232e8ce7c2b613e13d.26afe74e3d63a33dce72.js",
-      "static/css/f2a29218486351724968.css",
-      "static/chunks/pages/portpolio/front/[id]-b2ff88533da0a06698e0.js"
-    ],
-    "/portpolio/publisher/[id]": [
-      "static/chunks/main-24fb4026de0bd559f478.js",
-      "static/chunks/webpack-e067438c4cf4ef2ef178.js",
-      "static/chunks/framework.fadea2de77b9596ceff1.js",
-      "static/chunks/99bbe09d61f77172bcc2d9e02119eacb81e5fc70.5f428567be5effb950a3.js",
-      "static/chunks/938f0c6b1a050c1868bc7d5c56e57f3fff133841.f5f2847e6a29fcde91af.js",
-      "static/chunks/85cd321bf89e83267a34dc46c32ba5e597a84a8a.6784a40d081b9a188afb.js",
-      "static/chunks/08c6acedda0d10f7e3d654232e8ce7c2b613e13d.26afe74e3d63a33dce72.js",
-      "static/css/f2a29218486351724968.css",
-      "static/chunks/pages/portpolio/publisher/[id]-abe5c94dc2062a89cdcb.js"
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_error.js"
     ]
   },
   "ampFirstPages": []
