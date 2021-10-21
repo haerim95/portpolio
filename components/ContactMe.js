@@ -38,6 +38,7 @@ const Form = styled.form`
     border: none;
     border-bottom: 1px solid #eeeeee;
     background-color: transparent;
+    border-radius: 0;
     outline: none;
     color: #e7d8ee;
     ::placeholder {

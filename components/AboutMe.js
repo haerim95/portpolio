@@ -2,6 +2,7 @@ import React from 'react';
 import StyledTitle from './Titles';
 import styled from 'styled-components';
 import { Col, Row, Image } from 'antd';
+import { GithubOutlined, BoldOutlined } from '@ant-design/icons';
 import Profile from '../public/img/profile.jpeg';
 import Skill from './Skill';
 
@@ -31,6 +32,14 @@ const Paragraph = styled.div`
   & + & {
     margin-top: 2rem;
   }
+
+  a {
+    span {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 `;
 
 const ProfileImg = styled.div`
@@ -59,7 +68,7 @@ const AboutMe = () => {
               <span>웹 개발과 만난지 2년 6개월!</span>
             </p>
             <p className='intro'>
-              웹 퍼블리셔로 2년 6개월 간 근무한 경력이 있습니다. 있습니다!
+              웹 퍼블리셔로 2년 6개월 간 근무한 경력이 있습니다!
             </p>
             <p className='txt'>
               자사의 서비스 웹 페이지부터 Admin 페이지 및 SI 서비스를 퍼블리싱한
@@ -83,13 +92,14 @@ const AboutMe = () => {
               <span>배움의 의지!</span>
             </p>
             <p className='intro'>
-              개발의 즐거움은 &#39;알아가는 것 &#39; 이라고 생각합니다!
+              개발의 즐거움은 &#39;알아가는 것&#39; 이라고 생각합니다!
             </p>
             <p className='txt'>
-              눈 깜박하면 바뀌는 개발 시장에서 가장 중요한 것은 &#39;배우려는
-              의지&#39; 라고 생각합니다. 제가 작성한 코드들이 웹 어플리케이션이
-              되는 기쁨을 느낀 뒤로 배우려는 자세를 늦추지 않고 있습니다. 개인
-              노션과 티스토리 블로그를 이용해 배운 것을 기록하는 습관을 가지고
+              웹코딩은 무궁무진한 분야하고 생각합니다. 그리고 좋은 웹 개발자가
+              되기 위해 가장 중요한 것은 &#39;배우려는 의지&#39; 라고
+              생각합니다. 제가 작성한 코드들이 웹 어플리케이션이 되는 기쁨을
+              느낀 뒤로 배우려는 자세를 늦추지 않고 있습니다. 개인 노션과
+              티스토리 블로그를 이용해 배운 것을 기록하는 습관을 가지고
               있습니다.
             </p>
           </Paragraph>
@@ -102,10 +112,15 @@ const AboutMe = () => {
               불화는 싫어요! 커뮤니케이션을 중시하는 개발자입니다!
             </p>
             <p className='txt'>
-              3년 간 퍼블리셔 일을 하고, 팀 프로젝트 개발을 하면서 느꼈던 것은,
-              팀원들 간에 커뮤니케이션이 굉장이 중요하다는 것입니다. 팀원간의
-              미세한 의사소통 실수에도 개발에는 큰 영향을 끼친다는 것을 알고
-              있기 때문입니다. 때문에 저는 상대방에게 부탁할때는
+              2년 6개월 간 퍼블리셔 일을 하고, 팀 프로젝트 개발을 하면서 느꼈던
+              것은, 팀원들 간에 커뮤니케이션이 굉장이 중요하다는 것입니다.
+              케이체인이라는 곳에서 웹 퍼블리셔로 일하면서 주로 디자인에 맞춘 웹
+              퍼블리싱 업무를 했고, 백엔드 개발자와의 소통이 중요했습니다. 잘
+              모르는 언어로 일을 진행하게 되는 경우, 퇴근 후에도 인터넷 강의와
+              개발 서적을 찾아보고 스터디 모임을 가지며 공부하여 팀원들과 소통이
+              가능하도록 노력했고, 주어진 기간 내에 프로젝트를 마무리할 수
+              있었습니다. 팀원간의 미세한 의사소통 실수에도 개발에는 큰 영향을
+              끼친다는 것을 알고 있기 때문에 저는 상대방에게 부탁할때는
               &#39;COP&#39;로, 지시를 받았을 때는 &#39;디브리핑&#39;으로 되묻는
               습관을 들였습니다.
             </p>
@@ -124,9 +139,12 @@ const AboutMe = () => {
               <span>🎓</span>
               <span>교육 이수 내용</span>
             </p>
-            <p className='intro'>그린컴퓨터아트 학원 UIUX 과정 수료</p>
             <p className='intro'>
-              (청년여성) 클라우드 기술활용 웹개발자 과정 수료
+              그린컴퓨터아트 학원 UIUX 과정 수료 <span>1048 시간</span>
+            </p>
+            <p className='intro'>
+              (청년여성) 클라우드 기술활용 웹개발자 과정 수료{' '}
+              <span>216 시간</span>
             </p>
           </Paragraph>
         </Col>
@@ -139,6 +157,50 @@ const AboutMe = () => {
             <p className='intro'>
               ㈜케이체인
               <span>웹 퍼블리셔 - 2018.12 ~ 2021.05</span>
+            </p>
+          </Paragraph>
+        </Col>
+      </Row>
+      <Row style={{ marginTop: '1rem' }}>
+        <Col xs={24} md={12} xl={12}>
+          <Paragraph>
+            <p className='subTitle'>
+              <span>
+                <GithubOutlined />
+              </span>
+              <span>깃 허브 주소</span>
+            </p>
+            <p className='intro'>
+              <a
+                href='https://github.com/haerim95'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <span style={{ color: '#9e73a5' }}>
+                  https://github.com/haerim95
+                </span>
+              </a>
+            </p>
+          </Paragraph>
+        </Col>
+        <Col xs={24} md={12} xl={12}>
+          <Paragraph>
+            <p className='subTitle'>
+              <span>
+                <BoldOutlined />
+              </span>
+              <span>블로그 주소</span>
+            </p>
+            <p className='intro'>
+              <a
+                href='https://haerim95.tistory.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <span style={{ color: '#9e73a5' }}>
+                  림찌의 개발일기 바로가기
+                </span>
+              </a>
             </p>
           </Paragraph>
         </Col>
