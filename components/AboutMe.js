@@ -56,11 +56,10 @@ const AboutMe = () => {
           <Paragraph>
             <p className='subTitle'>
               <span>✅</span>
-              <span>웹 퍼블리셔 경력 2년 6개월! 반올림 해서 3년!</span>
+              <span>웹 개발과 만난지 2년 6개월!</span>
             </p>
             <p className='intro'>
-              웹 프론트엔드 개발자 김해림은 퍼블리싱을 2년 6개월 동안 한 경력이
-              있습니다!
+              웹 퍼블리셔로 2년 6개월 간 근무한 경력이 있습니다. 있습니다!
             </p>
             <p className='txt'>
               자사의 서비스 웹 페이지부터 Admin 페이지 및 SI 서비스를 퍼블리싱한
@@ -71,8 +70,11 @@ const AboutMe = () => {
             </p>
             <p className='txt'>
               또한, 남부여성발전센터에서 진행한 클라우드 기술활용 웹개발자
-              과정을 들으며 React와 Node의 전반적인 지식을 배웠으며, 직접 Azure
-              를 통해 클라우드 서버에 배포하는 경험도 겪었습니다.
+              과정을 들으며 React와 Node의 전반적인 지식을 배웠으며, 배운
+              기술들을 활용해 팀프로젝트 Travelary 라는 개인여행블로그
+              웹어플리케이션도 만들었고, 직접 Azure 를 통해 클라우드 서버에
+              배포도 해보았습니다. 하루가 다르게 변화하는 IT 산업에서 웹
+              프론트엔드 개발자 김해림도 나날이 업그레이드 될 것입니다.
             </p>
           </Paragraph>
           <Paragraph>
