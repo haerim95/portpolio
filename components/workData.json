@@ -54,7 +54,7 @@
       "name": "publisher",
       "title": "인터넷 신문 협회",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "인터넷 신문 협회",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://kina.or.kr",
@@ -99,7 +99,7 @@
       "name": "publisher",
       "title": "KLB",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "지방 방송 통합 사이트 KLB",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://klb.news/",
@@ -144,7 +144,7 @@
       "name": "publisher",
       "title": "토큰포스트",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "토큰포스트",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.tokenpost.kr/",
@@ -166,7 +166,7 @@
       "name": "publisher",
       "title": "EconoTimes",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "EconoTimes",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.econotimes.com/",
@@ -188,7 +188,7 @@
       "name": "publisher",
       "title": "퍼블리시 링크 V2",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "퍼블리시 링크",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "",
@@ -211,7 +211,7 @@
       "name": "publisher",
       "title": "코인고스트 V1",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "코인고스트 version 1",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "",
@@ -236,7 +236,7 @@
       "name": "publisher",
       "title": "코인고스트 V2",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "코인고스트 version 2",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "",
@@ -259,7 +259,7 @@
       "name": "publisher",
       "title": "본다빈치",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "본다빈치 뮤지엄",
         "work": "유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://www.bondavinci.com/",
@@ -281,7 +281,7 @@
       "name": "publisher",
       "title": "빅이슈 Korea",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "빅이슈 코리아",
         "work": "유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://bigissue.kr/",
@@ -301,9 +301,9 @@
     {
       "id": 11,
       "name": "publisher",
-      "title": "Publish Protocol",
+      "title": "Publish Protocol EN",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "Publish Protocol",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "url": "https://publishprotocol.io/",
@@ -325,7 +325,7 @@
       "name": "publisher",
       "title": "Publish Protocol",
       "explain": {
-        "title": "퍼블리시 소프트 Admin Page",
+        "title": "Publish Protocol",
         "work": "퍼블리싱 / 유지보수",
         "skill": "html / css / jquery / js",
         "date": "2019.04, 한 달간",
